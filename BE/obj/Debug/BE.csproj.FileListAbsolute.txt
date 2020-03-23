@@ -1,0 +1,11 @@
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\bin\Debug\BE.dll
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\bin\Debug\BE.pdb
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\obj\Debug\BE.dll
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\obj\Debug\BE.pdb
+C:\Users\shira\Documents\שנה ב\סמסטר א\mini project\project\dotNet5778_Project01_6120_5875\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\rache\Documents\mini project-dotnet-fainal\BE\bin\Debug\BE.dll
+C:\Users\rache\Documents\mini project-dotnet-fainal\BE\bin\Debug\BE.pdb
+C:\Users\rache\Documents\mini project-dotnet-fainal\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\rache\Documents\mini project-dotnet-fainal\BE\obj\Debug\BE.dll
+C:\Users\rache\Documents\mini project-dotnet-fainal\BE\obj\Debug\BE.pdb
