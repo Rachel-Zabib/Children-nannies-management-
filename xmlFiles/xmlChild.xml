@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<children>
+  <child>
+    <id>455555555</id>
+    <momId>444444444</momId>
+    <firstName>s</firstName>
+    <birthDate>17/01/2017 00:00:00</birthDate>
+    <isSpecialNeeds>False</isSpecialNeeds>
+    <specialNeeds></specialNeeds>
+    <isAllergy>False</isAllergy>
+    <allergy>חלב</allergy>
+    <diapers>False</diapers>
+  </child>
+  <child>
+    <id>123443522</id>
+    <momId>444444444</momId>
+    <firstName>מנעכראטטוחילן</firstName>
+    <birthDate>2018-01-20T20:57:55.5106398+02:00</birthDate>
+    <isSpecialNeeds>true</isSpecialNeeds>
+    <specialNeeds>לצמחיאעכהגגבגדף</specialNeeds>
+    <isAllergy>true</isAllergy>
+    <allergy>יחעארקכגבהנמצתץ</allergy>
+    <diapers>false</diapers>
+  </child>
+  <child>
+    <id>216669333</id>
+    <momId>126559320</momId>
+    <firstName>reut</firstName>
+    <birthDate>13/06/2017 00:00:00</birthDate>
+    <isSpecialNeeds>True</isSpecialNeeds>
+    <specialNeeds>love</specialNeeds>
+    <isAllergy>True</isAllergy>
+    <allergy>peanuts</allergy>
+    <diapers>True</diapers>
+  </child>
+</children>
