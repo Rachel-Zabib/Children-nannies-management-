@@ -1,0 +1,150 @@
+﻿<Window x:Class="PLWPF.ViewsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="ViewsWindow" Height="600" Width="600" >
+    <Grid>
+        <TabControl Background="{DynamicResource Brush1}">
+          <TabControl.Items>
+            <TabItem Header="Nanny" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                            <Label Content="select parameter for display:" FontSize="15"/>
+                            <ComboBox x:Name="parameter" Width="100" Margin="7" >
+                                <ComboBox.Items>
+                                    <ComboBoxItem x:Name="all" Content="All"/>
+                                    <ComboBoxItem x:Name="name" Content="By first name"/>
+                                    <ComboBoxItem x:Name="city" Content="By city"/>
+                                    <ComboBoxItem x:Name="monthSalary" Content="By month salary"/>
+                                    <ComboBoxItem x:Name="hourSalary" Content="By hour salary"/>
+                                </ComboBox.Items>
+                            </ComboBox>
+                            <Label Content="value of selected parameter:" FontSize="15"/>
+                            <TextBox x:Name="value" Width="100" Margin="5"/>
+                            <Button x:Name="FindNanny" Content="   Find   " Click="FindNanny_Click" FontSize="15"/>
+
+                        </WrapPanel>
+                        <ContentControl Grid.Row="1" >
+                            <ContentControl.Content>
+                                <ListView x:Name="ListNanny" Background="{DynamicResource Brush1}">
+                                    <ListView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel IsItemsHost="True" Orientation="Horizontal"  />
+                                        </ItemsPanelTemplate>
+                                    </ListView.ItemsPanel>
+                                </ListView>
+                            </ContentControl.Content>
+                        </ContentControl>
+                    </Grid>
+                </TabItem>
+            <TabItem Header="Mother" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                            <Label Content="select parameter for display:" FontSize="15"/>
+                            <ComboBox x:Name="parameter2" Width="100" Margin="7" >
+                                <ComboBox.Items>
+                                    <ComboBoxItem x:Name="allmom" Content="All"/>
+                                    <ComboBoxItem x:Name="namemom" Content="By family name"/>
+                                  
+                                </ComboBox.Items>
+                            </ComboBox>
+                            <Label Content="value of selected parameter:" FontSize="15"/>
+                            <TextBox x:Name="value2" Width="100" Margin="5"/>
+                            <Button x:Name="FindMom" Content="   Find   "  FontSize="15" Click="FindMom_Click"/>
+
+                        </WrapPanel>
+                        <ContentControl Grid.Row="1">
+                            <ContentControl.Content>
+                                <ListView x:Name="ListMom" Background="{DynamicResource Brush1}">
+                                    <ListView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel IsItemsHost="True" Orientation="Horizontal"  />
+                                        </ItemsPanelTemplate>
+                                    </ListView.ItemsPanel>
+                                </ListView>
+                            </ContentControl.Content>
+                        </ContentControl>
+                    </Grid>
+                </TabItem>
+            <TabItem Header="Child" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                            <Label Content="select parameter for display:" FontSize="15"/>
+                            <ComboBox x:Name="parameter3" Width="100" Margin="7" >
+                                <ComboBox.Items>
+                                    <ComboBoxItem x:Name="allch" Content="All"/>
+                                    <ComboBoxItem x:Name="momid" Content="By mother id"/>
+                                    <ComboBoxItem x:Name="special" Content="With special needs"/>
+                                    <ComboBoxItem x:Name="without" Content="Without nanny"/>
+                                </ComboBox.Items>
+                            </ComboBox>
+                            <Label Content="value of selected parameter:" FontSize="15"/>
+                            <TextBox x:Name="value3" Width="100" Margin="5" MaxLength="9"/>
+                            <Button x:Name="FindCh" Content="   Find   "  FontSize="15" Click="FindCh_Click" />
+
+                        </WrapPanel>
+                        <ContentControl Grid.Row="1">
+                            <ContentControl.Content>
+                                <ListView x:Name="ListChild" Background="{DynamicResource Brush1}">
+                                    <ListView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel IsItemsHost="True" Orientation="Horizontal"  />
+                                        </ItemsPanelTemplate>
+                                    </ListView.ItemsPanel>
+                                </ListView>
+                            </ContentControl.Content>
+                        </ContentControl>
+                    </Grid>
+                </TabItem>
+            <TabItem Header="Contract" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                            <Label Content="select parameter for display:" FontSize="15"/>
+                            <ComboBox x:Name="parameter4" Width="100" Margin="7" >
+                                <ComboBox.Items>
+                                    <ComboBoxItem x:Name="allcon" Content="All"/>
+                                    <ComboBoxItem x:Name="nanid" Content="By nanny id"/>
+                                    <ComboBoxItem x:Name="valid" Content="Valid contracts"/>
+                                </ComboBox.Items>
+                            </ComboBox>
+                            <Label Content="value of selected parameter:" FontSize="15"/>
+                            <TextBox x:Name="value4" Width="100" Margin="5" MaxLength="9"/>
+                            <Button x:Name="Findcon" Content="   Find   "  FontSize="15" Click="Findcon_Click"  />
+
+                        </WrapPanel>
+                        <ContentControl Grid.Row="1">
+                            <ContentControl.Content>
+                                <ListView x:Name="ListContract" Background="{DynamicResource Brush1}">
+                                    <ListView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel IsItemsHost="True" Orientation="Horizontal"  />
+                                        </ItemsPanelTemplate>
+                                    </ListView.ItemsPanel>
+                                </ListView>
+                            </ContentControl.Content>
+                        </ContentControl>
+                    </Grid>
+                </TabItem>
+         </TabControl.Items>
+        </TabControl>
+    </Grid>
+</Window>

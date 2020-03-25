@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B39FE47-CFED-4364-8F71-0E48357322AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PLWPF</RootNamespace>
+    <AssemblyName>PLWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AllergyWindow.xaml.cs">
+      <DependentUpon>AllergyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupContractWindow.xaml.cs">
+      <DependentUpon>GroupContractWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupNannyWindow.xaml.cs">
+      <DependentUpon>GroupNannyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatchWindow.xaml.cs">
+      <DependentUpon>MatchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhonebookWindow.xaml.cs">
+      <DependentUpon>PhonebookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecomndWindow.xaml.cs">
+      <DependentUpon>RecomndWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWindow.xaml.cs">
+      <DependentUpon>ViewsWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AllergyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BirthdayWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContractWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupContractWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupNannyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LinkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BirthdayWindow.xaml.cs">
+      <DependentUpon>BirthdayWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindow.xaml.cs">
+      <DependentUpon>ChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContractWindow.xaml.cs">
+      <DependentUpon>ContractWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertBoolToVisibility.cs" />
+    <Compile Include="LinkWindow.xaml.cs">
+      <DependentUpon>LinkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MatchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MotherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NannyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="numbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAddChild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAddContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAddNanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemove.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemoveChild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemoveContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemoveNanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdateChild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdateContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdateNanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhonebookWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecomndWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MotherWindow.xaml.cs">
+      <DependentUpon>MotherWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NannyWindow.xaml.cs">
+      <DependentUpon>NannyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="numbers.xaml.cs">
+      <DependentUpon>numbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAdd.xaml.cs">
+      <DependentUpon>PageAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddChild.xaml.cs">
+      <DependentUpon>PageAddChild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddContract.xaml.cs">
+      <DependentUpon>PageAddContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddNanny.xaml.cs">
+      <DependentUpon>PageAddNanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemove.xaml.cs">
+      <DependentUpon>PageRemove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemoveChild.xaml.cs">
+      <DependentUpon>PageRemoveChild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemoveContract.xaml.cs">
+      <DependentUpon>PageRemoveContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemoveNanny.xaml.cs">
+      <DependentUpon>PageRemoveNanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdate.xaml.cs">
+      <DependentUpon>PageUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdateChild.xaml.cs">
+      <DependentUpon>PageUpdateChild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdateContract.xaml.cs">
+      <DependentUpon>PageUpdateContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdateNanny.xaml.cs">
+      <DependentUpon>PageUpdateNanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BE.Child.datasource" />
+    <None Include="Properties\DataSources\BE.Contract.datasource" />
+    <None Include="Properties\DataSources\BE.Mother.datasource" />
+    <None Include="Properties\DataSources\BE.Nanny.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{a3939cd8-3e6c-435d-a168-cd78059d32a8}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{3f412a95-2764-4d6a-bdb5-2e9215be5f85}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\open3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\backkk.jpg" />
+    <Resource Include="images\bbb.jpg" />
+    <Resource Include="images\רקע.jpg" />
+    <Resource Include="images\by.jpg" />
+    <Resource Include="images\b4.jpg" />
+    <Resource Include="images\tog.jpg" />
+    <Resource Include="images\pink2.jpg" />
+    <Resource Include="images\p2.jpg" />
+    <Resource Include="images\fin.jpg" />
+    <Content Include="sound\song.mpeg" />
+    <Resource Include="images\back.jpeg" />
+    <Resource Include="images\pic.jpg" />
+    <Resource Include="images\star.jpg" />
+    <Content Include="sound\AUD-20171225-WA0012.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

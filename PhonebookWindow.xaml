@@ -1,0 +1,61 @@
+﻿<Window x:Class="PLWPF.PhonebookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="PhonebookWindow" Height="600" Width="600" >
+    <TabControl Background="{DynamicResource Brush1}">
+        <TabControl.Items>
+            <TabItem Header="mother">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                        <Label Content="hey mother!enter your child id to get phonebook of his kindergarten:" FontSize="15"/>
+                        <TextBox x:Name="idChild" Width="100" Margin="5" MaxLength="9"/>
+                        <Button x:Name="FindMother" Content="Find" Click="FindMother_Click" FontSize="15"/>
+
+                    </WrapPanel>
+                    <ContentControl Grid.Row="1">
+                        <ContentControl.Content>
+                            <ListView x:Name="phoneList1" Background="{DynamicResource Brush1}">
+                                <ListView.Items>
+                                    <ListViewItem x:Name="ListItem1"/>
+                                </ListView.Items>
+
+                            </ListView>
+                        </ContentControl.Content>
+                    </ContentControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="nanny">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Grid.Row="0" VerticalAlignment="Center">
+                        <Label Content="hey nanny!enter id to get phonebook of your kindergarten:" FontSize="15"/>
+                        <TextBox x:Name="idNanny" Width="100" Margin="5" MaxLength="9"/>
+                        <Button x:Name="FindNanny" Content="Find" Click="FindNanny_Click" FontSize="15"/>
+
+                    </WrapPanel>
+                    <ContentControl Grid.Row="1">
+                        <ContentControl.Content>
+                            <ListView x:Name="phonesList2" Background="{DynamicResource Brush1}">
+                                <ListView.Items>
+                                    <ListViewItem x:Name="ListItem2"/>
+                                </ListView.Items>
+
+                            </ListView>
+                        </ContentControl.Content>
+                    </ContentControl>
+                </Grid>
+            </TabItem>
+        </TabControl.Items>
+    </TabControl>
+</Window>

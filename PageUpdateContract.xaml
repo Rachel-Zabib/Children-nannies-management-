@@ -1,0 +1,66 @@
+﻿<Page x:Class="PLWPF.PageUpdateContract"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PLWPF"
+      mc:Ignorable="d" 
+        d:DesignHeight="550" d:DesignWidth="500"
+      Title="UpdateContract" Background="{DynamicResource Brush1}">
+
+    <Page.Resources>
+        <local:ConvertBoolToVisibility x:Key="ConvertBoolToVisibility"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Please enter contract details:" HorizontalAlignment="Center" Grid.Row="0" FontSize="15"/>
+        <Grid x:Name="grid1" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Contract Counter:"/>
+            <ComboBox x:Name="contract_counter_ComboBox" Padding="0" FontSize="10" Width="120" VerticalAlignment="Center"  Grid.Row="0" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1" SelectionChanged="contract_counter_ComboBox_SelectionChanged" FontWeight="Bold" />
+            <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Child Id:"/>
+            <TextBox x:Name="child_IdTextBox" Width="120" VerticalAlignment="Center"  Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1" IsEnabled="False" Text="{Binding Child_Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+            <Label VerticalAlignment="Center" Grid.Row="8" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Contract Was Signed:"/>
+            <CheckBox x:Name="contract_Was_SignedCheckBox" VerticalAlignment="Center" Grid.Row="8" Margin="3" IsChecked="{Binding Contract_Was_Signed, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left" Grid.Column="1" Content=""/>
+            <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="End Date:"/>
+            <DatePicker x:Name="end_DateDatePicker" VerticalAlignment="Center" SelectedDate="{Binding End_Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="6" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Hour Salary:"/>
+            <TextBox x:Name="hour_SalaryTextBox"  Width="120" VerticalAlignment="Center" Text="{Binding Hour_Salary, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="6" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="9" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Including Social Benefits:"/>
+            <CheckBox x:Name="including_Social_BenefitsCheckBox" VerticalAlignment="Center" Grid.Row="9" Margin="3" IsChecked="{Binding Including_Social_Benefits, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left" Grid.Column="1" Content=""/>
+            <Label VerticalAlignment="Center" Grid.Row="5" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Is Month Salary:"/>
+            <CheckBox x:Name="is_Month_SalaryCheckBox" VerticalAlignment="Center" Grid.Row="5" Margin="3" IsChecked="{Binding Is_Month_Salary, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left" Grid.Column="1" Content=""/>
+            <Label VerticalAlignment="Center" Grid.Row="10" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Meeting:"/>
+            <CheckBox x:Name="meetingCheckBox" VerticalAlignment="Center" Grid.Row="10" Margin="3" IsChecked="{Binding Meeting, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left" Grid.Column="1" Content=""/>
+            <Label VerticalAlignment="Center" Grid.Row="7" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Month Salary:" Visibility="{Binding ElementName=is_Month_SalaryCheckBox, Path=IsChecked,Converter={StaticResource ConvertBoolToVisibility }}"/>
+            <TextBox x:Name="month_SalaryTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Month_Salary, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Visibility="{Binding ElementName=is_Month_SalaryCheckBox, Path=IsChecked,Converter={StaticResource ConvertBoolToVisibility }}" Grid.Row="7" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Nanny Id:"/>
+            <TextBox x:Name="nanny_IdTextBox" Width="120" VerticalAlignment="Center"  Grid.Row="2" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1" IsEnabled="False" Text="{Binding Nanny_Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+            <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Start Date:"/>
+            <DatePicker x:Name="start_DateDatePicker" VerticalAlignment="Center" SelectedDate="{Binding Start_Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="1"/>
+        </Grid>
+        <Button x:Name="updateButton" Content="Update"   Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Click="updateButton_Click"/>
+    </Grid>
+</Page>
